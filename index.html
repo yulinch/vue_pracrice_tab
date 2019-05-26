@@ -1,0 +1,120 @@
+<head>
+    <title>Vue tab</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <section>
+                <div class="tab-list">
+                    <a href="javascript:;" class="tab-item" :class="{current : tabIdx === 1}" @click="changeIdx(1)">
+                        <span>全部</span>
+                    </a>
+                    <a href="javascript:;" class="tab-item" :class="{current : tabIdx === 2}" @click="changeIdx(2)">
+                        <span>2019</span>
+                    </a>
+                </div>
+                <div class="tab-content-wrapper">
+                    <div class="tab-content" v-if="tabIdx === 1">
+                        <ul class="article-list">
+                            <li class="article-item">
+                                <a href="#">
+                                    <div class="bg-img-wrapper">
+                                        <div class="bg-img" style="background-image: url(https://images.unsplash.com/photo-1557459274-def653531b63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></div>
+                                    </div>
+                                </a>
+                                <div class="title">
+                                    <a href="">標題標題標題標題標題標題標題標題</a>
+                                </div>
+                            </li>
+                            <li class="article-item">
+                                <a href="#">
+                                    <div class="bg-img-wrapper">
+                                        <div class="bg-img" style="background-image: url(https://images.unsplash.com/photo-1557459274-def653531b63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></div>
+                                    </div>
+                                </a>
+                                <div class="title">
+                                    <a href="">標題標題標題標題標題標題標題標題</a>
+                                </div>
+                            </li>
+                            <li class="article-item">
+                                <a href="#">
+                                    <div class="bg-img-wrapper">
+                                        <div class="bg-img" style="background-image: url(https://images.unsplash.com/photo-1557459274-def653531b63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></div>
+                                    </div>
+                                </a>
+                                <div class="title">
+                                    <a href="">標題標題標題標題標題標題標題標題</a>
+                                </div>
+                            </li>
+                            <li class="article-item">
+                                <a href="#">
+                                    <div class="bg-img-wrapper">
+                                        <div class="bg-img" style="background-image: url(https://images.unsplash.com/photo-1557459274-def653531b63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></div>
+                                    </div>
+                                </a>
+                                <div class="title">
+                                    <a href="">標題標題標題標題標題標題標題標題</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" v-if="tabIdx === 2">
+                        <ul class="article-list">
+                            <li class="article-item">
+                                <a href="#">
+                                    <div class="bg-img-wrapper">
+                                        <div class="bg-img" style="background-image: url(https://images.unsplash.com/photo-1557414988-8ef2d7fe8e2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></div>
+                                    </div>
+                                </a>
+                                <div class="title">
+                                    <a href="">標題標題標題標題標題標題標題標題</a>
+                                </div>
+                            </li>
+                            <li class="article-item">
+                                <a href="#">
+                                    <div class="bg-img-wrapper">
+                                        <div class="bg-img" style="background-image: url(https://images.unsplash.com/photo-1557459274-def653531b63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></div>
+                                    </div>
+                                </a>
+                                <div class="title">
+                                    <a href="">標題標題標題標題標題標題標題標題</a>
+                                </div>
+                            </li>
+                            <li class="article-item">
+                                <a href="#">
+                                    <div class="bg-img-wrapper">
+                                        <div class="bg-img" style="background-image: url(https://images.unsplash.com/photo-1557436596-8a18f15a5d82?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"></div>
+                                    </div>
+                                </a>
+                                <div class="title">
+                                    <a href="">標題標題標題標題標題標題標題標題</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+    // Vue
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                tabIdx: 2
+            },
+            computed: {
+                changeIdx(idx) {
+                    this.tabIdx === idx;
+                    console.log(idx);
+                }
+            }
+        })
+    </script>
+</body>
