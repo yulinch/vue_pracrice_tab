@@ -1,0 +1,85 @@
+.tab-content ul li .bg-img {
+  width: 100%;
+  height: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.tab-list .tab-item.current span:after, .tab-list .tab-item span:after, .tab-content ul li, .tab-content ul li:hover {
+  -webkit-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease; }
+
+.test {
+  background-color: red; }
+
+body {
+  font-family: "Clear Sans", Verdana, "Century Gothic", "PingFang", Helvetica, Arial, "PingFang TC", "LiHei Pro Medium", "Heiti TC", "Microsoft JhengHei", "DFKai-SB", sans-serif; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto; }
+  .container section {
+    width: 100%;
+    margin: 50px 0; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+.tab-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px; }
+  .tab-list .tab-item {
+    display: inline-block;
+    padding: 0 8px;
+    border-left: 1px solid #9e9e9e; }
+    .tab-list .tab-item:last-of-type {
+      border-right: 1px solid #9e9e9e; }
+    .tab-list .tab-item.current {
+      color: darkgray; }
+      .tab-list .tab-item.current span:after {
+        width: 100%; }
+    .tab-list .tab-item span {
+      position: relative;
+      display: inline-block;
+      padding: 3px 5px; }
+      .tab-list .tab-item span:after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        background-color: darkgray;
+        bottom: 0;
+        left: 0; }
+
+.tab-content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .tab-content ul li {
+    width: calc((100% - 10px * 4) / 3);
+    padding: 0 10px;
+    margin-bottom: 30px; }
+    .tab-content ul li:nth-child(3n+3) {
+      padding-right: 0; }
+    .tab-content ul li:nth-child(3n+1) {
+      padding-left: 0; }
+    .tab-content ul li:hover {
+      opacity: 0.9; }
+    .tab-content ul li .bg-img {
+      padding-top: 56.25%; }
+    .tab-content ul li .title {
+      margin-top: 5px;
+      font-size: 14px; }
